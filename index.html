@@ -7,16 +7,15 @@
     <title>Сибирская грибная поляна</title>
     <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" media="all" href="css/style.css">
+    <link rel="stylesheet" type="text/css" media="all" href="css/owl.carousel.min.css">
     <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/script.js" type="text/javascript"></script>
 </head>
 <body>
     <header>
         <div class="container">
             <div class="row">
                 <div class="col-md-4 offset-md-4">
-                    <div class="logo position-absolute">
+                    <div class="logo">
                         <a href="/">
                             <img src="img/logo.png" alt="Сибирская грибная поляна">
                         </a>
@@ -29,9 +28,9 @@
                 </div>
                 <div class="col-md-4 offset-md-4 text-center">
                     <a href="tel:83833383777" class="phone h5 color align-items-center d-flex justify-content-center">8(383) <span class="h4 color_yelow m-0 ml-2"> 338-37-77</span></a>
-                    <button class="btn btn-primary">
+                    <a class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                         Перезвонить
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -47,16 +46,17 @@
             </div>
             <div class="row">
                 <div class="offset-md-4 col-md-4">
-                    <form action="" class="text-center">
-                        <input type="text" type="text" placeholder="Ваше имя">
-                        <input type="text" type="text" placeholder="Ваш телефон">
+                    <form id="intro_form" action="send.php" method="post" class="text-center">
+                        <input type="text" name="name" placeholder="Ваше имя">
+                        <input type="text" name="phone" placeholder="Ваш телефон">
+                        <input type="hidden" name="form" value="Скачать прайс">
                         <input type="submit" value="Скачать прайс" class="btn btn-primary">
                     </form>
                 </div>
             </div>
         </div>
         <div class="position-absolute grib_left"><img src="img/grib_1.png" alt=""></div>
-        <div class="position-absolute grib_right"><img src="img/grib_2.png" alt=""></div>
+        <div class="position-absolute grib_right text-right"><img src="img/grib_2.png" alt=""></div>
     </section>
 
     <section id="product">
@@ -65,7 +65,7 @@
                 <div class="col-md-12">
                     <div class="h2 text-uppercase text-center mb-4 color_green">наша продукция</div>
                 </div>
-                <div class="col-md-6 text-right">
+                <div class="col-md-6col-md-6 text-sm-right text-center">
                     <img src="img/griby_3.png">
                 </div>
                 <div class="col-md-6">
@@ -102,23 +102,7 @@
                     <div class="for_grib_item mb-4">
                         <div class="row align-items-center">
                             <div class="col-md-4">
-                                <img src="img/for_grib_1.png" alt="">
-                            </div>
-                            <div class="col-md-8">
-                                <p class="pr-4 mb-0">
-                                    Помощь в планировании, организации и запуску ферм по выращиванию шампиньонов (или небольших грибных хозяйств)
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="for_grib_item mb-4">
-                        <div class="row align-items-center">
-                            <div class="col-md-4">
-                                <img src="img/for_grib_1.png" alt="">
+                                <img src="img/for_grib_2.png" alt="">
                             </div>
                             <div class="col-md-8">
                                 <p class="pr-4 mb-0">
@@ -132,7 +116,21 @@
                     <div class="for_grib_item mb-4">
                         <div class="row align-items-center">
                             <div class="col-md-4">
-                                <img src="img/for_grib_1.png" alt="">
+                                <img src="img/for_grib_3.png" alt="">
+                            </div>
+                            <div class="col-md-8">
+                                <p class="pr-4 mb-0">
+                                    Помощь в планировании, организации и запуску ферм по выращиванию шампиньонов (или небольших грибных хозяйств)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="for_grib_item mb-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-4">
+                                <img src="img/for_grib_4.png" alt="">
                             </div>
                             <div class="col-md-8">
                                 <p class="pr-4 mb-0">
@@ -145,5 +143,310 @@
             </div>
         </div>
     </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="h2 color_green text-center text-uppercase mb-5">О нашей компании</div>
+                    <div class="about_content d-sm-flex">
+                        <div class="about_first"></div>
+                        <div class="about_second align-items-center">
+                            <div class="about_item">
+                                <span class="about_count h3 text-center color font-black">
+                                    2017
+                                </span>
+                                <span>
+                                        год создания организации
+                                </span>
+                            </div>
+                            <div class="about_item">
+                                <span class="about_count h3 text-center color font-black">
+                                    2000
+                                </span>
+                                <span>
+                                        м2 производственные площади
+                                </span>
+                            </div>
+                            <div class="about_item">
+                                <span class="about_count h3 text-center color font-black">
+                                    >30
+                                </span>
+                                <span>
+                                        человек сотрудников
+                                </span>
+                            </div>
+                            <div class="about_item">
+                                <span class="about_count h3 text-center color font-black">
+                                    >40
+                                </span>
+                                <span>
+                                        тонн грибов в месяц
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vygoda">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="h2 text-center mb-5 text-uppercase color_white">почему выгодно работать с нами</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="vygoda_count font-black color_white text-center position-relative">
+                        <span>01</span>
+                        <img src="img/icon_1.png" alt="" class="position-absolute">
+                    </div>
+                    <div class="color_white text-center">Всегда свежая продукция</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="vygoda_count font-black color_white text-center position-relative">
+                        <span>02</span>
+                        <img src="img/icon_2.png" alt="" class="position-absolute">
+                    </div>
+                    <div class="color_white text-center">Качество подтверждено декларациями ЕАС</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="vygoda_count font-black color_white text-center position-relative">
+                        <span>03</span>
+                        <img src="img/icon_3.png" alt="" class="position-absolute">
+                    </div>
+                    <div class="color_white text-center">Доставка с температурным режимом по городу и в отдалённые районы</div>
+                </div>
+                <div class="col-md-4 offset-md-2">
+                    <div class="vygoda_count font-black color_white text-center position-relative">
+                        <span>04</span>
+                        <img src="img/icon_4.png" alt="" class="position-absolute">
+                    </div>
+                    <div class="color_white text-center">Индивидуальный подход к каждому клиенту</div>
+                </div>
+                <div class="col-md-4">
+                    <div class="vygoda_count font-black color_white text-center position-relative">
+                        <span>05</span>
+                        <img src="img/icon_5.png" alt="" class="position-absolute">
+                    </div>
+                    <div class="color_white text-center">Отгрузка со склада без выходных дней</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rost">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="h2 color_green text-center text-uppercase mb-5">как мы выращиваем грибы</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="rost_item d-flex rost_left">
+                        <span>
+                                    Для шампиньонов нужны хороший компост, навоз, желательно конский. Мел, гипс и очень сложный процесс стерилизации почвы
+                        </span>
+                        <span class="rost_count font-black color h3">
+                                1
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4 offset-md-4">
+                    <div class="rost_item d-flex rost_right">
+                        <span>
+                                Для шампиньонов нужны хороший компост, навоз, желательно конский. Мел, гипс и очень сложный процесс стерилизации почвы
+                        </span>
+                        <span class="rost_count font-black color h3">
+                            2
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 offset-md-4"><img src="img/rost.png" alt="как мы выращиваем грибы"></div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="rost_item d-flex rost_left">
+                        <span>
+                                Для шампиньонов нужны хороший компост, навоз, желательно конский. Мел, гипс и очень сложный процесс стерилизации почвы
+                        </span>
+                        <span class="rost_count font-black color h3">
+                            3
+                        </span>
+                    </div>
+                </div>
+                <div class="col-md-4 offset-md-4">
+                    <div class="rost_item d-flex rost_right">
+                        <span>
+                                    Для шампиньонов нужны хороший компост, навоз, желательно конский. Мел, гипс и очень сложный процесс стерилизации почвы
+                        </span>
+                        <span class="rost_count font-black color h3">
+                            4
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center"><a href="" class="btn btn-primaty btn-primaty-green" data-toggle="modal" data-target="#exampleModal">заказать пробную партию</a></div>
+        </div>
+    </section>
+
+    <section id="reviews">
+        <div class="container">
+            <div class="h2 text-center text-uppercase color_white mb-5">отзывы наших клиентов</div>
+            <div class="reviews_carousel">
+                <div class="owl-carousel">
+                    <div class="item">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-5 position-relative">
+                                <img src="img/reviews.png" alt="" class="text-center position-relative mb-4 mb-sm-0">
+                                <img src="img/icon_6.png" alt="" class="position-absolute rw">
+                            </div>
+                            <div class="col-sm-7 d-flex justify-content-center flex-column">
+                                <div class="title font-bold mb-3">Юлия, ТС «Добрянка»</div>
+                                <div class="desc font-italic">Сибирская Грибная Поляна – наш активный партнёр! Часто участвуют в
+                                        разных акциях своей продукцией, помогая привлечь больше покупателей.
+                                        Нам нравится ваша оперативность в формировании заявок и радует качество грибочков, которые мы используем не только для продажи, но и для приготовления горячих блюд Русской Традиционной Кухни.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-5 position-relative">
+                                <img src="img/reviews.png" alt="" class="text-center position-relative mb-4 mb-sm-0">
+                                <img src="img/icon_6.png" alt="" class="position-absolute rw">
+                            </div>
+                            <div class="col-sm-7 d-flex justify-content-center flex-column">
+                                <div class="title font-bold mb-3">Юлия, ТС «Добрянка»</div>
+                                <div class="desc font-italic">Сибирская Грибная Поляна – наш активный партнёр! Часто участвуют в
+                                        разных акциях своей продукцией, помогая привлечь больше покупателей.
+                                        Нам нравится ваша оперативность в формировании заявок и радует качество грибочков, которые мы используем не только для продажи, но и для приготовления горячих блюд Русской Традиционной Кухни.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-5 position-relative">
+                                <img src="img/reviews.png" alt="" class="text-center position-relative mb-4 mb-sm-0">
+                                <img src="img/icon_6.png" alt="" class="position-absolute rw">
+                            </div>
+                            <div class="col-sm-7 d-flex justify-content-center flex-column">
+                                <div class="title font-bold mb-3">Юлия, ТС «Добрянка»</div>
+                                <div class="desc font-italic">Сибирская Грибная Поляна – наш активный партнёр! Часто участвуют в
+                                        разных акциях своей продукцией, помогая привлечь больше покупателей.
+                                        Нам нравится ваша оперативность в формировании заявок и радует качество грибочков, которые мы используем не только для продажи, но и для приготовления горячих блюд Русской Традиционной Кухни.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work">
+        <div class="container">
+            <div class="h2 color text-center text-uppercase position-relative"><span>с нами работают</span></div>
+            <div class="work_content">
+                <div class="mt-5 p-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-3"><img src="img/work_1.png" alt=""></div>
+                        <div class="col-md-3"><img src="img/work_2.png" alt=""></div>
+                        <div class="col-md-3"><img src="img/work_3.png" alt=""></div>
+                        <div class="col-md-3"><img src="img/work_4.png" alt=""></div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-md-3 offset-md-2"><img src="img/work_5.png" alt=""></div>
+                        <div class="col-md-3"><img src="img/work_6.png" alt=""></div>
+                        <div class="col-md-3"><img src="img/work_7.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="map_block">
+        <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+        <div id="map">
+          
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <form id="map_form" action="send.php" method="post" class="position-absolute text-center">
+                        <div class="h3 color_white text-center text-uppercase font-black">связаться с нами</div>
+                        <input type="text" name="name" placeholder="Ваше имя">
+                        <input type="text" name="email" placeholder="Ваш Email">
+                        <input type="text" name="phone" placeholder="Ваше телефон">
+                        <input type="hidden" name="form" value="Связаться с нами">
+                        <input type="submit" class="btn btn-primary" value="Отправить">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="sehd.php" method="post" id="form_modal">
+                    <input type="text" name="name" placeholder="Ваше имя">
+                    <input type="text" name="phone" placeholder="Ваш телефон">
+                    <input type="hidden" name="form" value="Модальное окно">
+                    <input type="submit" value="Отправить" class="btn btn-primary">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <footer class="color_white">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <a href="/" class="logo_footer">
+                        <img src="img/logo.png" alt="Сибирская грибная поляна">
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <div class="footer_title cursiv">
+                        Сибирская грибная поляна
+                    </div>
+                    <div class="footer_desc text-uppercase">
+                        Оптовые поставки грибов от производителя
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <ul class="footer_menu">
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>Оптовые поставки грибов от производителя</li>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i>E-mail: Sgp17.84@mail.ru</li>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i>Телефон: 8-383-338-37-77</li>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i>Viber, Whatsapp: 8-913-980-12-20</li>
+                        <li><i class="fa fa-clock-o" aria-hidden="true"></i>Режим работы: Пн. — Пт. с 9:00 до 18:00</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <p>ИНН  5409007854</p>
+                    <p>ОГРН 1175476119158</p>
+                    <a href="" class="footer_link d-block text-center text-uppercase color_yelow" data-toggle="modal" data-target="#exampleModal">написать нам</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://use.fontawesome.com/f58baef578.js"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/jquery.mikeinput.min.js" type="text/javascript"></script>
+    <script src="js/owl.carousel.min.js" type="text/javascript"></script>
+    <script src="js/jquery.form.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
 </body>
 </html>
