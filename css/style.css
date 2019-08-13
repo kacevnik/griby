@@ -250,6 +250,14 @@ header .phone:hover {
     width: 80%
 }
 
+#product .product_item {
+
+}
+
+#product .product_item img {
+    width: 100%;
+}
+
 #for_grib {
     padding: 70px 0;
     background: #edf0eb;
@@ -349,6 +357,14 @@ header .phone:hover {
 
 .rost_right .rost_count {
     margin: 0 20px 0 0;
+}
+
+.img_center {
+    padding: 60px 0;
+}
+
+.img_center img {
+    top: -135px;
 }
 
 #reviews {
